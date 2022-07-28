@@ -1,0 +1,46 @@
+<h1 (mouseover)="cambiarVariable1()">Ejemplo directivas</h1>
+<h2>Directivas ngClass</h2>
+
+<h3 [ngClass]="variable1 < 8 ? 'texto-error' : 'texto-exito'">Valor de la variable: {{ variable1 }}</h3>
+
+<hr>
+
+<h2>Directivas ngStyle</h2>
+
+<h3 [style.border]=" variable2 == 'Agustin' ? '5px solid green' : '5px dotted green'">Ejemplo de ngStyle con el valor de
+    : {{variable2}}</h3>
+
+<hr>
+<h2>Directivas personalizada</h2>
+
+<h3 appDirectivaPersonalizada>Ejemplo de directiva personalizada</h3>
+<hr>
+<h2>Ejemplo de ngFor</h2>
+
+<ul>
+    <li *ngFor="let item of arreglo">
+        {{item}}
+    </li>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+
+</ul>
+
+<hr>
+<h2>Ejemplo de ngif y ngSwitch</h2>
+
+<p *ngIf="variable1 > -1">
+    El valor {{variable1}} se esta mostrando
+</p>
+
+<p [ngSwitch]="variable3">
+    <span *ngSwitchCase="5">Caso 1 para {{variable3}}</span>
+    <span *ngSwitchCase="3">Caso 2 para {{variable3}}</span>
+    <span *ngSwitchDefault>Caso por defult {{variable3}}</span>
+</p>
+
+<button (click)="cambiarVariable1()">Cambiar variable 1</button>
+<input type="text" placeholder="ingrese el valor de variable 1" [(ngModel)]="variable1">
+
+<h3>{{estudiantes | json}}</h3>

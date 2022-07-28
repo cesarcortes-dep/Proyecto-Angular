@@ -1,0 +1,12 @@
+<h1> Desafio 2</h1>
+
+<h2 *ngIf="nombre != '' ">Hola mi nombre es {{nombre}}</h2>
+
+<h3>Mis familiares</h3>
+
+<ul>
+  <li *ngFor="let estudiante of estudiantes">
+    {{estudiante.nombre}} 
+    {{estudiante.apellido}}
+  </li>
+</ul>
