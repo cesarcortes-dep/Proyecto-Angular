@@ -1,0 +1,33 @@
+
+<div class="card" style="width: 25rem;">
+    <h5 class="card-title">Formulario</h5>
+    <form [formGroup]="formularioContacto" (ngSubmit)="enviarContacto()">
+        <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" class="form-control" placeholder="Escribe tu nombre" formControlName="nombre">
+            <p class="text-danger fw-bold" *ngIf="formularioContacto.get('nombre')?.errors?.['required']">*Este campo es
+                obligatorio</p>
+
+        </div>
+
+        <div class="form-group">
+            <label>Correo</label>
+            <input type="text" class="form-control" placeholder="Escribe tu correo" formControlName="email">
+            <p class="text-danger fw-bold" *ngIf="formularioContacto.get('email')?.errors?.['required']">*Este campo es
+                obligatorio</p>
+            <p class="text-danger fw-bold" *ngIf="formularioContacto.get('email')?.errors?.['email']">*Este campo es de
+                formato correo</p>
+
+        </div>
+        <div class="form-group">
+            <label>Mensaje</label>
+            <input type="text" class="form-control" placeholder="Escribe tu mensaje" formControlName="mensaje">
+            <p class="text-danger fw-bold" *ngIf="formularioContacto.get('mensaje')?.errors?.['required']">*Este campo
+                es obligatorio</p>
+            <small id="emailHelp" class="form-text text-muted">No vamos a compartir tu mensaje con nadie</small>
+
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!formularioContacto.valid">Enviar</button>
+    </form>
+
+</div>
