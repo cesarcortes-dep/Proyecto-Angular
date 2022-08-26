@@ -11,6 +11,7 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatButtonModule, } from "@angular/material/button";
 import { MatIconModule, } from "@angular/material/icon";
 import { MatDividerModule, } from "@angular/material/divider";
+import { MainService } from './main/services/main.service';
 
 
 @NgModule({
@@ -27,10 +28,12 @@ import { MatDividerModule, } from "@angular/material/divider";
     MatSidenavModule,
     MatButtonModule,
     MatIconModule,
-    MatDividerModule
+    
     
   ],
-  providers: [],
+  providers: [ 
+    MainService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

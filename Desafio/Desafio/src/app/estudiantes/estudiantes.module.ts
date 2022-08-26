@@ -5,6 +5,8 @@ import { EstudiantesRoutingModule } from './estudiantes-routing.module';
 import { ListaEstudiantesComponent } from './components/lista-estudiantes/lista-estudiantes.component';
 import { ListaClasesComponent } from './components/lista-clases/lista-clases.component';
 import { ListaCursosComponent } from './components/lista-cursos/lista-cursos.component';
+import { CursosService } from './service/cursos.service';
+import {MatCardModule} from "@angular/material/card";
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { ListaCursosComponent } from './components/lista-cursos/lista-cursos.com
   ],
   imports: [
     CommonModule,
-    EstudiantesRoutingModule
-  ]
+    EstudiantesRoutingModule, 
+    MatCardModule
+  ], 
+  providers:[CursosService]
 })
 export class EstudiantesModule { }

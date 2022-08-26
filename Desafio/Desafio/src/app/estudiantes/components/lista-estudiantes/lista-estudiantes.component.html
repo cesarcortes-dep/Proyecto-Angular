@@ -1,1 +1,6 @@
-<p>lista-estudiantes works!</p>
+<p>Estudiantes work!</p>
+<div *ngFor="let estudiante of estudiantes">
+    <mat-card>{{estudiante.id}} {{estudiante.nombre}} {{estudiante.apellido}}</mat-card>
+</div>
+
+
