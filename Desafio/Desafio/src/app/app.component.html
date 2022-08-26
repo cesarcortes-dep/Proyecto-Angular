@@ -1,0 +1,57 @@
+<!-- <mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Desafio Modulos</span>
+  </mat-toolbar-row>
+
+  <mat-icon>favorite</mat-icon>inicio
+  <mat-icon>favorite</mat-icon>Estudiantes
+  <mat-icon>favorite</mat-icon>Clases
+  <mat-icon>favorite</mat-icon>Cursos
+</mat-toolbar>
+ -->
+
+<mat-toolbar class="mat-elevation-z8">
+
+  Segunda Entrega Final Angular
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened="">
+    <button routerLink="/inicio" mat-button class="menu-button">
+      <a>
+        <mat-icon>home</mat-icon>
+      </a>
+
+      <span>Inicio</span>
+    </button>
+    <button routerLink="/estudiantes/lista-estudiantes" mat-button class="menu-button">
+      <a>
+        <mat-icon>person</mat-icon>
+      </a>
+
+      <span>Estudiantes</span>
+    </button>
+    <button routerLink="/estudiantes/lista-clases" mat-button class="menu-button">
+      <a>
+        <mat-icon>info</mat-icon>
+      </a>
+
+      <span>Clases</span>
+    </button>
+
+    <button routerLink="/estudiantes/lista-cursos" mat-button class="menu-button">
+      <a>
+        <mat-icon>help</mat-icon>
+      </a>
+
+      <span>Cursos</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
